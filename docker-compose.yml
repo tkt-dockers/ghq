@@ -3,6 +3,9 @@ services:
   app:
     build: .
     # entrypoint: ["/bin/sh", "-c"]
-    working_dir: /app
-    volumes:
-      - .:/app
+    environment:
+      - GHQ_PATH="~/src"
+    # volumes:
+    # - ~/src:/root/src
+    # - ~/.gitconfig:/root/.gitconfig
+    # - ~/.ssh/id_rsa:/root/.ssh/id_rsa
